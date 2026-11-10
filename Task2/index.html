@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame & Focus | Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">frame<span>&</span>focus.</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+        </nav>
+        <a href="#gallery" class="nav-btn">Explore Photos ↗</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">A COLLECTION OF MOMENTS</p>
+                <h1>Every picture<br>has a <em>story.</em></h1>
+                <p class="hero-description">
+                    Explore a collection of beautiful places, little details
+                    and unforgettable moments captured through a lens.
+                </p>
+                <a href="#gallery" class="explore-btn">Explore Gallery <span>→</span></a>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1000"
+                     alt="Beautiful mountain lake">
+                <div class="image-note">
+                    <span>01 / 05</span>
+                    <p>Nature is the best artist.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE COLLECTION</p>
+                    <h2>Explore the gallery<span>.</span></h2>
+                </div>
+                <p class="section-note">A little beauty in every frame.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="travel">Travel</button>
+                <button class="filter-btn" data-filter="animals">Animals</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="gallery-item tall" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=900"
+                         alt="Green forest">
+                    <div class="photo-info">
+                        <span>Nature</span>
+                        <h3>Into the Wild</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900"
+                         alt="Modern architecture">
+                    <div class="photo-info">
+                        <span>Architecture</span>
+                        <h3>Modern Lines</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="travel">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=900"
+                         alt="Beautiful travel landscape">
+                    <div class="photo-info">
+                        <span>Travel</span>
+                        <h3>Open Roads</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animals">
+                    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900"
+                         alt="Wild deer">
+                    <div class="photo-info">
+                        <span>Animals</span>
+                        <h3>Wild & Free</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=900"
+                         alt="Mountain lake">
+                    <div class="photo-info">
+                        <span>Nature</span>
+                        <h3>Quiet Escape</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item tall" data-category="travel">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900"
+                         alt="Snowy mountains">
+                    <div class="photo-info">
+                        <span>Travel</span>
+                        <h3>Above the Clouds</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=900"
+                         alt="Architectural details">
+                    <div class="photo-info">
+                        <span>Architecture</span>
+                        <h3>Beautiful Details</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animals">
+                    <img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?w=900"
+                         alt="Wild animal">
+                    <div class="photo-info">
+                        <span>Animals</span>
+                        <h3>Into the Wild</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">BEHIND THE FRAMES</p>
+            <h2>More than just pictures.</h2>
+            <p>
+                Every photograph captures a feeling, a place or a moment
+                worth remembering. This gallery brings those moments together
+                in one simple collection.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">frame<span>&</span>focus.</a>
+        <p>© 2026 Frame & Focus. All rights reserved.</p>
+        <a href="#home">Back to top ↑</a>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-btn" id="closeBtn" aria-label="Close">×</button>
+        <button class="prev-btn" id="prevBtn" aria-label="Previous image">❮</button>
+
+        <div class="lightbox-content">
+            <img src="" alt="Selected photograph" id="lightboxImg">
+            <p id="imageCaption"></p>
+        </div>
+
+        <button class="next-btn" id="nextBtn" aria-label="Next image">❯</button>
+        <div class="image-counter" id="imageCounter"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
