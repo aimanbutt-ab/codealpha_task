@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody | Music Player</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">♫</span>
+                melody<span class="logo-dot">.</span>
+            </div>
+
+            <p class="menu-label">MENU</p>
+
+            <a href="#" class="menu-item active">
+                <span>⌂</span> Home
+            </a>
+
+            <a href="#playlist" class="menu-item">
+                <span>♫</span> My Playlist
+            </a>
+
+            <div class="sidebar-bottom">
+                <div class="music-tip">
+                    <span class="tip-icon">♪</span>
+                    <h3>Music makes<br>everything better.</h3>
+                    <p>Find your rhythm and enjoy every moment.</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="welcome">YOUR PERSONAL MUSIC SPACE</p>
+                    <h1>Good music, good mood.</h1>
+                </div>
+                <div class="profile">M</div>
+            </header>
+
+            <!-- Featured Section -->
+            <section class="featured">
+                <div class="featured-text">
+                    <span class="featured-label">NOW PLAYING</span>
+                    <h2>Feel the<br>music.</h2>
+                    <p>Your favourite sounds, all in one place.</p>
+                    <button id="featuredPlay" class="featured-btn">
+                        ▶ Listen Now
+                    </button>
+                </div>
+
+                <div class="featured-art">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800"
+                         alt="Music studio">
+                </div>
+            </section>
+
+            <!-- Player Section -->
+            <section class="player-section">
+
+                <div class="section-title">
+                    <div>
+                        <p class="small-heading">YOUR MUSIC</p>
+                        <h2>Music Player</h2>
+                    </div>
+                    <span class="live-status">
+                        <span class="status-dot"></span> READY TO PLAY
+                    </span>
+                </div>
+
+                <div class="player-card">
+
+                    <div class="album-art">
+                        <img id="cover" 
+                             src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600"
+                             alt="Album cover">
+                        <div class="art-overlay">♫</div>
+                    </div>
+
+                    <div class="song-details">
+                        <p class="now-label">NOW PLAYING</p>
+                        <h3 id="songTitle">Midnight Dreams</h3>
+                        <p id="artistName">Unknown Artist</p>
+                    </div>
+
+                    <div class="progress-area">
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+
+                        <div class="time-info">
+                            <span id="currentTime">0:00</span>
+                            <span id="duration">0:00</span>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="prevBtn" class="control-btn" aria-label="Previous song">⏮</button>
+                        <button id="playBtn" class="play-btn" aria-label="Play">▶</button>
+                        <button id="nextBtn" class="control-btn" aria-label="Next song">⏭</button>
+                    </div>
+
+                    <div class="volume-area">
+                        <span>♪</span>
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+                        <span>♫</span>
+                    </div>
+
+                    <audio id="audio"></audio>
+
+                </div>
+
+            </section>
+
+            <!-- Playlist -->
+            <section class="playlist-section" id="playlist">
+
+                <div class="playlist-heading">
+                    <div>
+                        <p class="small-heading">YOUR COLLECTION</p>
+                        <h2>Playlist</h2>
+                    </div>
+                    <span id="songCount">3 Songs</span>
+                </div>
+
+                <div class="playlist" id="playlistContainer">
+
+                    <!-- Songs are added with JavaScript -->
+
+                </div>
+
+            </section>
+
+            <footer>
+                <p>Made for music lovers. ♡</p>
+                <p>© 2026 Melody Player</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
